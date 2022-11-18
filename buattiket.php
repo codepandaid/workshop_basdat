@@ -22,13 +22,13 @@ if(isset($_POST['buattiket'])){
      $query = pg_query("INSERT INTO tiket (id_stasiun_tujuan, id_stasiun_sumber, id_kereta, harga, jadwal_berangkat, jadwal_sampai) VALUEs ($st_tujuan, $st_asal, $kereta, $harga, '$jadwal_berangkat', '$jadwal_sampai')");
 
 	// apakah query simpan berhasil?
-	// if( $query==TRUE ) {
-	// 	// kalau berhasil alihkan ke halaman index.php 
-	// 	header('Location: index.php');
-	// } else {
-	// 	// kalau gagal kembalikan ke halaman form
-	// 	header('Location: buattiket_page.php');
-	// }
+	if( $query==TRUE ) {
+		// kalau berhasil alihkan ke halaman index.php 
+		header('Location: index.php');
+	} else {
+		// kalau gagal kembalikan ke halaman form
+		header('Location: buattiket_page.php');
+	}
 
 
 } else {

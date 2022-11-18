@@ -10,11 +10,19 @@
     <header>
         <h1>Pemesanan Tiket PT KAW</h1>
     </header>
-    <ul>
-        <li><a href="orderticket_page.php">Pemesananan Tiket</a></li>
-        <li><a href="tambahkereta_page.php">Pendaftaran Kereta</a></li>
-        <li><a href="tambahstasiun_page.php">Pendaftaran Stasiun</a></li>
-        <li><a href="buattiket_page.php">Pembuatan Tiket</a></li>
-    </ul>
+    <p>
+        <h3>User</h3>
+        <ul>
+            <li><a href="pesantiket_page.php">Pesan Tiket</a></li>
+        </ul>
+    </p>
+    <p>
+        <h3>Admin</h3>
+        <ul>
+            <li><a href="tambahkereta_page.php">Pendaftaran Kereta</a></li>
+            <li><a href="tambahstasiun_page.php">Pendaftaran Stasiun</a></li>
+            <li><a href="buattiket_page.php">Pembuatan Tiket</a></li>
+        </ul>
+    </p>
 </body>
 </html>
