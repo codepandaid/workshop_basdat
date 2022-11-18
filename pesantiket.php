@@ -5,20 +5,32 @@ if(isset($_POST['pesantiket'])){
 
 	// ambil data dari formulir
     $nama_user = $_POST['namauser'];
-    $nama_query = pg_query("SELECT * FROM users WHERE nama = '$nama_user'");
-    var_dump($_POST);
-    var_dump($nama_query);
-	// // buat query
-    //  $query = pg_query("INSERT INTO tiket (id_stasiun_tujuan, id_stasiun_sumber, id_kereta, harga, jadwal_berangkat, jadwal_sampai) VALUEs ($st_tujuan, $st_asal, $kereta, $harga, '$jadwal_berangkat', '$jadwal_sampai')");
+    $id_tiket = $_POST['id_tiket_dipesan'];
+    $no_kursi = $_POST['no_kursi_kereta'];
+    $time = time();
+    $tanggal_pembelian = date('Y-m-d H:i:s', $time);
 
-	// // apakah query simpan berhasil?
-	// if( $query==TRUE ) {
-	// 	// kalau berhasil alihkan ke halaman index.php 
-	// 	header('Location: index.php');
-	// } else {
-	// 	// kalau gagal kembalikan ke halaman form
-	// 	header('Location: pesantiket_page.php');
-	// }
+    // Pemeriksaan User
+    $user_query = pg_query("SELECT * FROM users WHERE nama = '$nama_user'");
+    $count = pg_num_rows($user_query);
+    if ($count < 1) {
+        $insert_user_baru = pg_query("INSERT INTO users (nama) VALUEs ('$nama_user')");
+        $user_query = pg_query("SELECT * FROM users WHERE nama = '$nama_user'");
+    }
+    $user = pg_fetch_array($user_query);
+    $id_user = $user['id'];
+
+	// buat query
+     $query = pg_query("INSERT INTO bukti_pembelian_tiket (nomor_kursi, id_user, id_tiket, tanggal_pembelian) VALUEs ($no_kursi, $id_user, $id_tiket, '$tanggal_pembelian')");
+
+	// apakah query simpan berhasil?
+	if( $query==TRUE ) {
+		// kalau berhasil alihkan ke halaman index.php 
+		header('Location: index.php');
+	} else {
+		// kalau gagal kembalikan ke halaman form
+		header('Location: pesantiket_page.php');
+	}
 
 
 } else {

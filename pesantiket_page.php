@@ -44,8 +44,8 @@
                             <input type="hidden" name="id_tiket_dipesan" value="<?php echo $tiket['id']?>">
                             <label for="namauser">Nama Penumpang :</label><br>
                             <input type="text" name="namauser" /><br>
-                            <label for="no_kursi_kereta_<?php echo $tiket['id_kereta']?>">Nomor Kursi :</label>
-                            <input type="number" name="no_kursi_kereta_<?php echo $tiket['id_kereta']?>" min="1" max="<?php echo $tiket['kapasitas']?>" /><br>
+                            <label for="no_kursi_kereta">Nomor Kursi :</label>
+                            <input type="number" name="no_kursi_kereta" min="1" max="<?php echo $tiket['kapasitas']?>" /><br>
                             <input type="submit" value="Pesan" name="pesantiket">
                         </form>
                     </td>
