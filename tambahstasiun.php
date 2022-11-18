@@ -16,7 +16,7 @@ if(isset($_POST['tambahstasiun'])){
 		header('Location: index.php');
 	} else {
 		// kalau gagal kembalikan ke halaman form
-		header('Location: tambahstasiun.php');
+		header('Location: tambahstasiun_page.php');
 	}
 
 

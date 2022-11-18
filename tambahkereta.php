@@ -22,7 +22,7 @@ if(isset($_POST['tambahkereta'])){
 		header('Location: index.php');
 	} else {
 		// kalau gagal kembalikan ke halaman form
-		header('Location: tambahkereta.php');
+		header('Location: tambahkereta_page.php');
 	}
 
 
