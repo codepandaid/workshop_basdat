@@ -46,6 +46,10 @@
                                 <input type="hidden" value="<?= $kereta['id']?>" name="id" />
                                 <input type="submit" value="Edit" name="editkereta" />
                             </form>
+                            <form action="deletekereta.php" method="post">
+                                <input type="hidden" value="<?= $kereta['id']?>" name="id" />
+                                <input type="submit" value="Delete" name="deletekereta" />
+                            </form>
                         </td>
                     </tr>
                     <?php
