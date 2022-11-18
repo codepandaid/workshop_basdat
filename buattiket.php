@@ -19,7 +19,7 @@ if(isset($_POST['buattiket'])){
     // var_dump($jadwal_berangkat);
 
 	// buat query
-     $query = pg_query("INSERT INTO tiket (id_stasiun_tujuan, id_stasiun_sumber, id_kereta, harga, jadwal_berangkat, jadwal_sampai) VALUEs ($st_tujuan, $st_asal, $kereta, $harga, $jadwal_berangkat, $jadwal_sampai)");
+     $query = pg_query("INSERT INTO tiket (id_stasiun_tujuan, id_stasiun_sumber, id_kereta, harga, jadwal_berangkat, jadwal_sampai) VALUEs ($st_tujuan, $st_asal, $kereta, $harga, '$jadwal_berangkat', '$jadwal_sampai')");
 
 	// apakah query simpan berhasil?
 	// if( $query==TRUE ) {
