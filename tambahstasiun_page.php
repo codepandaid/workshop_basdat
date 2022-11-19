@@ -10,6 +10,7 @@
     <header>
         <h1>Pendaftaran Stasiun Baru</h1>
     </header>
+    <a href="index.php">Homepage</a>
     <form action="tambahstasiun.php" method="post">
         <fieldset>
             <p>
