@@ -1,3 +1,9 @@
+<?php
+    if (isset($_GET['status'])) {
+        print($_GET['status']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +24,9 @@
     <p>
         <h3>Admin</h3>
         <ul>
+            <li><a href="buattiket_page.php">Pembuatan Tiket Baru</a></li>
             <li><a href="tambahkereta_page.php">Pendaftaran Kereta Baru</a></li>
+            <li><a href="daftarkereta_page.php">Daftar Kereta</a></li>
             <li><a href="tambahstasiun_page.php">Pendaftaran Stasiun Baru</a></li>
         </ul>
     </p>
